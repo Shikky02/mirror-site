@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-active-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirror: Daily Reflection</title>
+<meta name="description" content="Mirror: Daily Reflection — set a morning intention, reflect in the evening. Join the iPhone beta.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <button id="lang-toggle" type="button" aria-label="Switch language">DE</button>
+</header>
+<main>
+  <h1>Mirror: Daily Reflection</h1>
+  <p class="slogan" data-lang="en">See clearly. Then act.</p>
+  <p class="slogan" data-lang="de">Klar sehen. Dann handeln.</p>
+
+  <div class="lede">
+    <p data-lang="en">Every morning, you set an intention. Every evening, you reflect on how it went.</p>
+    <p data-lang="de">Jeden Morgen setzt du eine Intention. Jeden Abend reflektierst du, wie es gelaufen ist.</p>
+
+    <p data-lang="en">Mirror shows you what you keep avoiding — and what you're already getting right.</p>
+    <p data-lang="de">Mirror zeigt dir, was du vermeidest – und was du schon gut machst.</p>
+
+    <p data-lang="en">Your entries stay on your iPhone.</p>
+    <p data-lang="de">Deine Einträge bleiben auf deinem iPhone.</p>
+  </div>
+
+  <a class="cta" href="[LINK]">
+    <span data-lang="en">Join the beta (iPhone)</span>
+    <span data-lang="de">An der Beta teilnehmen (iPhone)</span>
+  </a>
+  <p class="note" data-lang="en">iPhone only.</p>
+  <p class="note" data-lang="de">Nur iPhone.</p>
+
+  <h2>
+    <span data-lang="en">Get started</span>
+    <span data-lang="de">So geht's</span>
+  </h2>
+  <ol class="steps">
+    <li data-lang="en">Open the link above</li>
+    <li data-lang="de">Link oben öffnen</li>
+    <li data-lang="en">Install TestFlight</li>
+    <li data-lang="de">TestFlight laden</li>
+    <li data-lang="en">Install Mirror</li>
+    <li data-lang="de">Mirror installieren</li>
+  </ol>
+
+  <p class="launch-note" data-lang="en">In the App Store on December 10.</p>
+  <p class="launch-note" data-lang="de">Ab 10. Dezember im App Store.</p>
+</main>
+<footer>
+  <p data-lang="en">No trackers. No cookies. No account required.</p>
+  <p data-lang="de">Keine Tracker. Keine Cookies. Kein Konto nötig.</p>
+  <p class="links">
+    <a href="https://shikky02.github.io/mirror-legal/datenschutz.html" data-lang="en">Privacy</a>
+    <a href="https://shikky02.github.io/mirror-legal/datenschutz.html" data-lang="de">Datenschutz</a>
+    <a href="https://shikky02.github.io/mirror-legal/impressum.html" data-lang="en">Legal Notice</a>
+    <a href="https://shikky02.github.io/mirror-legal/impressum.html" data-lang="de">Impressum</a>
+    <a href="https://shikky02.github.io/mirror-legal/support.html" data-lang="en">Support</a>
+    <a href="https://shikky02.github.io/mirror-legal/support.html" data-lang="de">Support</a>
+    <a href="mailto:themirrorapp@gmx.de">themirrorapp@gmx.de</a>
+  </p>
+</footer>
+<script>
+(function () {
+  var html = document.documentElement;
+  var btn = document.getElementById('lang-toggle');
+  function setLang(lang) {
+    html.setAttribute('data-active-lang', lang);
+    html.setAttribute('lang', lang);
+    btn.textContent = lang === 'de' ? 'EN' : 'DE';
+  }
+  btn.addEventListener('click', function () {
+    var current = html.getAttribute('data-active-lang');
+    setLang(current === 'de' ? 'en' : 'de');
+  });
+})();
+</script>
+</body>
+</html>
